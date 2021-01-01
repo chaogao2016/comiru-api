@@ -21,3 +21,6 @@ Route::group([], function ($app) {
     $app->addRoute(['OPTIONS','GET'],'test','TestController@test');
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
