@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group([], function ($app) {
+
+    // test
+    $app->addRoute(['OPTIONS','GET'],'test','TestController@test');
+
+});
